@@ -10,12 +10,12 @@ set_include_path(get_include_path() . PATH_SEPARATOR . dirname(__FILE__) . '/con
  */
 class CybsClient extends SoapClient
 {
-    const CLIENT_LIBRARY_VERSION = "CyberSource PHP 1.0.0";
+    const CLIENT_LIBRARY_VERSION = "CyberSource PHP 1.0.1";
 
     private $merchantId;
     private $transactionKey;
 
-    function __construct($options=array(), $properties, $nvp=false)
+    function __construct($options=array(), $properties, $credentials, $nvp=false)
     {
         $required = array('merchant_id', 'transaction_key');
 
@@ -38,8 +38,8 @@ class CybsClient extends SoapClient
         }
 
         parent::__construct($wsdl, $options);
-        $this->merchantId = $properties['merchant_id'];
-        $this->transactionKey = $properties['transaction_key'];
+        $this->merchantId = $credentials['merchant_id'];
+        $this->transactionKey = $credentials['transaction_key'];
 
         $nameSpace = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd";
 

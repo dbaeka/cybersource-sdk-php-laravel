@@ -1,17 +1,17 @@
 {
-  "name": "cybersource/sdk-php",
-  "description": "CyberSource PHP SOAP client",
+  "name": "dbaeka/cybersource-sdk-php-laravel",
+  "description": "CyberSource Laravel PHP SOAP client",
   "keywords": [
     "cybersource",
     "payments",
     "api"
   ],
-  "homepage": "https://github.com/CyberSource/cybersource-sdk-php",
+  "homepage": "https://github.com/dbaeka/cybersource-sdk-php-laravel",
   "license": "Proprietary",
   "authors": [
     {
-      "name": "CyberSource",
-      "homepage": "https://github.com/CyberSource"
+      "name": "Delmwin Baeka",
+      "homepage": "http://delmwinbaeka.me/"
     }
   ],
   "require": {

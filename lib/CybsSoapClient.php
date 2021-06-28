@@ -12,8 +12,9 @@ class CybsSoapClient extends CybsClient
 
     function __construct($options=array())
     {
+        $credentials = config("cybersource.credentials");
         $properties = parse_ini_file('cybs.ini');
-        parent::__construct($options, $properties);
+        parent::__construct($options, $properties, $credentials);
     }
 
     /**
